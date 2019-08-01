@@ -22,3 +22,8 @@ $ npm install gulp-eslint
 $ gulp watch
 ```
 5. Once you are done editing your files, make sure to exit the gulp build with `^C` on the Command Line.
+## Troubleshooting
+### Why aren't my edits showing when I open up the index.html file?
+The `index.html` file found in the root of the directory isn't the file you want to open if you want to see the finalized edits. All files ready for production are found in the `dist` directory. Opening up the `index.html` or any other html files will display the correct CSS and JavaScript.
+### What is the command to start my build seeing `gulp build` isn't working?
+To start the gulp build, just use `gulp` on the Command Line! It's that simple!!
