@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body>
+
+	{% include "partials/header.html" %}
+
+	<div class="content-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+
+  {% include "partials/end.html" %}
+
+</body>
+</html>

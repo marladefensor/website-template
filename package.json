@@ -1,0 +1,28 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "Here's a little website template to get yourself started!! ## What's in this template? - Bootstrap 4 - Gulp (done with version 4.0.2)   - Gulp-sass   - Autoprefixer   - ESLint   - BrowserSync   - Nunjucks",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marladefensor/website-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marladefensor/website-template/issues"
+  },
+  "homepage": "https://github.com/marladefensor/website-template#readme"
+}

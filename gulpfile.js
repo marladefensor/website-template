@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const eslint = require('gulp-eslint');
 const browserSync = require("browser-sync").create();
+const nunjucksRender = require('gulp-nunjucks-render');
 
 function defaultTask (cb) {
   style();
@@ -49,6 +50,20 @@ function copyJs() {
   );
 }
 
+function nunjucks() {
+  nunjucksRender.nunjucks.configure(['templates']);
+  // Gets .html and .nunjucks files in pages
+  return (
+    gulp.src('pages/*.html')
+        // Renders template with nunjucks
+        .pipe(nunjucksRender({
+          path: ['templates'] // String or Array
+        }))
+        // output files in dist folder
+        .pipe(gulp.dest('dist'))
+  );
+};
+
 function watch(){
   browserSync.init({
         server: {
@@ -60,7 +75,9 @@ function watch(){
   gulp.watch('js/**/*.js', lint);
   gulp.watch('./*.html', copyHtml);
   gulp.watch('js/*.js', copyJs);
-  gulp.watch('/index.html', reload);
+  gulp.watch('pages/*', nunjucks);
+  gulp.watch('pages/*', reload);
+
 };
 
 function reload() {
