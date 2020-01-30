@@ -10,6 +10,7 @@ function defaultTask (cb) {
   copyHtml();
   copyImages();
   copyJs();
+  nunjucks();
   console.log('We did it, boys!');
   cb();
 }
@@ -76,6 +77,7 @@ function watch(){
   gulp.watch('./*.html', copyHtml);
   gulp.watch('js/*.js', copyJs);
   gulp.watch('pages/*', nunjucks);
+  gulp.watch('templates', nunjucks);
   gulp.watch('pages/*', reload);
 
 };
@@ -95,6 +97,7 @@ function lint() {
 };
 
 exports.default = defaultTask;
+exports.build = defaultTask;
 exports.style = style;
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
