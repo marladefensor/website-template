@@ -4,7 +4,7 @@
   "description": "Here's a little website template to get yourself started!! ## What's in this template? - Bootstrap 4 - Gulp (done with version 4.0.2)   - Gulp-sass   - Autoprefixer   - ESLint   - BrowserSync   - Nunjucks",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-eslint": "^6.0.0",
